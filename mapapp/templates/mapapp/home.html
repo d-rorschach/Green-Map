@@ -163,11 +163,11 @@
 </body>
 
 <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoicHJheWFzcGFsIiwiYSI6ImNrbTJ5MTF0NTAzNW8yeGxjcDRja3B0dG8ifQ.NQRGpeu6L4I1fLu6-BHgxA';
-    Radar.initialize("prj_test_pk_737e26c635ad6458a9569435c72782ea5b07ae3d");
+    mapboxgl.accessToken = 'map_box_token';
+    Radar.initialize("radar_api_key");
     async function aqi_fun(start, end)
     {
-        const r1=await fetch('https://api.weatherbit.io/v2.0/current/airquality?lat='+start[1]+'&lon='+start[0]+'&key=af38865fdd5640c78d75083bf555ca89');
+        const r1=await fetch('https://api.weatherbit.io/v2.0/current/airquality?lat='+start[1]+'&lon='+start[0]+'&key=aqi_api_weatherbit.io');
         const json_obj1 = await r1.json();
         console.log(json_obj1)
         document.getElementById('source_aqi_value').innerHTML=json_obj1['data'][0]['aqi'];
